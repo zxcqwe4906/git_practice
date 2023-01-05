@@ -1,11 +1,11 @@
 class Calculate:
     def add(self, a: int, b: int):
-        if not (isinstance(a, int) or isinstance(b, int)):
+        if not (isinstance(a, int) and isinstance(b, int)):
             raise TypeError('Input must be int.')
         return a + b
 
     def sub(self, a: int, b: int):
-        if not (isinstance(a, int) or isinstance(b, int)):
+        if not (isinstance(a, int) and isinstance(b, int)):
             raise TypeError('Input must be int.')
         return a - b
 
