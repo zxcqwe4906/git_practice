@@ -4,13 +4,14 @@ class Calculate:
     def add(self, *nums):
         for num in nums:
             if not isinstance(num, int):
-                print('Only integer inputs, please.')
+                raise TypeError('Inputs must be integers')
                 return 
 
         return np.sum(nums)
 
-
-    def sub(self, a, b):
+    def sub(self, a: int, b: int):
+        if not (isinstance(a, int) and isinstance(b, int)):
+            raise TypeError('Input must be int.')
         return a - b
 
 if __name__ == '__main__':
