@@ -1,6 +1,13 @@
+import numpy as np 
+
 class Calculate:
-    def add(self, a, b, c=0):
-        return a + b + c
+    def add(self, *nums):
+        for num in nums:
+            if not isinstance(num, int): 
+                raise TypeError('Inputs should be integers only!')
+
+        return np.sum(nums)
+
 
     def sub(self, a, b):
         return a - b
